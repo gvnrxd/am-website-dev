@@ -1,0 +1,38 @@
+/* Global css variables */
+
+:root {
+  --nav-h: 0px;
+  --nav-c: rgba(147, 147, 147, 10%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+}
+
+main {
+  height: 200vh;
+  background-color: pink;
+}
+
+footer {
+  min-height: var(--nav-h);
+  background-color: var(--nav-c);
+}

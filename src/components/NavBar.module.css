@@ -1,0 +1,27 @@
+.navBar {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--nav-c);
+  flex-wrap: wrap;
+}
+
+.navBar > li {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.navBar a {
+  text-decoration: none;
+  white-space: normal;
+}
+
+.navBar a:hover {
+  color: blue;
+}
+
+.navBar a:active {
+  font-weight: bold;
+  border-bottom: 2px solid currentColor;
+}
