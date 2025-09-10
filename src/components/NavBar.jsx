@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useLayoutEffect, useRef } from "react";
 import styles from "./NavBar.module.css";
+import NavLogo from "../assets/am-navLogo.png";
 
 export default function NavBar() {
   const navRef = useRef(null);
@@ -30,16 +31,23 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav id="site-nav" ref={navRef}>
+    <nav id="site-nav" ref={navRef} className={styles.siteNav}>
+      <NavLink to="/" className={styles.logoLink}>
+        <img
+          src={NavLogo}
+          alt="Coach McCutcheon Logo"
+          className={styles.logo}
+        />
+      </NavLink>
       <ul className={styles.navBar}>
-        <li>
+        <li className={styles.homeNav}>
           <NavLink to="/" end>
             Home
           </NavLink>
         </li>
         <li>
           <NavLink to="/about" end>
-            About Us
+            About
           </NavLink>
         </li>
         <li>

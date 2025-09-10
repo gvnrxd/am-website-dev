@@ -2,7 +2,10 @@
 
 :root {
   --nav-h: 0px;
-  --nav-c: rgba(147, 147, 147, 10%);
+  /*--nav-c: rgb(147, 147, 147);*/
+  --nav-c: #f5f6fa;
+  --nav-c2: rgba(245, 246, 250, 0.6);
+  --h1-font: clamp(2rem, 3.5rem + 2vw, 5rem);
 }
 
 * {
@@ -15,6 +18,19 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--nav-c);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -24,15 +40,33 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: white;
 }
 
 main {
-  height: 200vh;
-  background-color: pink;
+  background-color: wheat;
+  flex: 1;
+  min-height: calc(100vh - var(--nav-h));
 }
 
 footer {
   min-height: var(--nav-h);
   background-color: var(--nav-c);
+}
+
+footer * {
+  margin-block-end: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  border-bottom: 2px solid blue;
+  padding-bottom: 0.2rem;
+}
+
+nav {
+  background-color: var(--nav-c2);
 }

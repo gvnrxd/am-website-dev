@@ -11,6 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import AboutUsPage from "./pages/AboutUsPage";
 import HomePage from "./pages/HomePage";
 import SiteMapPage from "./pages/SiteMapPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/site-map" element={<SiteMapPage />} />
             {/* Catch Unknown Routes */}
-            <Route path="/*" element={<h2>404 Not Found</h2>} />
+            <Route path="/*" element={<ErrorPage />} />
           </Routes>
         </main>
       </div>

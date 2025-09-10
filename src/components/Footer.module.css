@@ -1,5 +1,6 @@
 footer {
   padding: 1rem;
+  background-color: var(--nav-c);
 }
 
 .footerNav {
@@ -62,6 +63,8 @@ footer {
   display: flex;
   padding: 1rem 0;
   border-bottom: 1px solid black;
+
+  overflow-wrap: anywhere;
 }
 
 .footerFormContainer {

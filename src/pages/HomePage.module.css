@@ -1,0 +1,118 @@
+.heroSection {
+  background: url(../assets/am-hero.jpg) center/cover no-repeat;
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(2, 2, 2, 0.5);
+  z-index: 1;
+}
+
+.heroSection > * {
+  z-index: 2;
+}
+
+.heroContent {
+  padding: 1rem;
+  text-align: center;
+  overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heroContent h1 {
+  font-size: var(--h1-font);
+}
+
+.heroContent p {
+  text-wrap: anywhere;
+  font-size: calc(var(--h1-font) / 4);
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.heroBtnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.heroBtnContainer a {
+  color: white;
+  background-color: lightblue;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bolder;
+  border-radius: 6px;
+  transition: all 0.2 ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.heroBtnContainer a:hover {
+  background-color: deepskyblue;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.heroBtnContainer a:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.heroBtnContainer a span {
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.heroFooter {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-style: italic;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  gap: 0.2rem;
+  display: flex;
+  color: lightgrey;
+}
+
+.heroFooter img {
+  height: 100%;
+}
+
+/* 
+
+Changes hero based on screen size and screen density. On sharper screens grab 2x
+
+.heroSection {
+  background: image-set(
+    url("../assets/hero-1280.jpg") 1x,
+    url("../assets/hero-1280@2x.jpg") 2x
+  ) center/cover no-repeat;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    background: image-set(
+      url("../assets/hero-768.jpg") 1x,
+      url("../assets/hero-768@2x.jpg") 2x
+    ) center/cover no-repeat;
+  }
+}
+
+*/

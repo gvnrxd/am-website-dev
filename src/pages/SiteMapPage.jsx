@@ -1,83 +1,121 @@
+import { Link, NavLink } from "react-router-dom";
+import styles from "./SiteMap.module.css";
+
 export default function SiteMapPage() {
   return (
     <>
-      <main aria-labelledby="sitemap-title" className="wrapper">
-        <h1 id="sitemap-title">Sitemap</h1>
+      <main aria-labelledby="sitemap-title" className={styles.wrapper}>
+        <div className={styles.siteMapTitleBox}>
+          <h1 id="sitemap-title" className={styles.siteMapTitle}>
+            Sitemap
+          </h1>
+          <span>Center of Navigation</span>
+        </div>
 
-        <section aria-labelledby="explore">
-          <h2 id="explore">Explore</h2>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/trainings-and-services">Training & Services</a>
-            </li>
-            <li>
-              <a href="/pricing">Pricing</a>
-            </li>
-            <li>
-              <a href="/testimonials">Testimonials</a>
-            </li>
-            <li>
-              <a href="/facts-and-questions">FAQs</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
-        </section>
-
-        <section aria-labelledby="follow">
-          <h2 id="follow">Follow us</h2>
-          <ul>
-            <li>
-              <a href="https://facebook.com/yourhandle">Facebook</a>
-            </li>
-            <li>
-              <a href="https://instagram.com/yourhandle">Instagram</a>
-            </li>
-            <li>
-              <a href="https://youtube.com/@yourhandle">YouTube</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/yourhandle">LinkedIn</a>
-            </li>
-          </ul>
-        </section>
-
-        <section aria-labelledby="legal">
-          <h2 id="legal">Legal</h2>
-          <ul>
-            <li>
-              <a href="/privacy">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="/terms">Terms of Use</a>
-            </li>
-            <li>
-              <a href="/refunds">Refund Policy</a>
-            </li>
-          </ul>
-        </section>
-        <section aria-labelledby="subscribe">
-          <h2 id="subscribe">Subscribe</h2>
-          <form action="/subscribe" method="post">
-            <label>
-              <span className="sr-only">Email</span>
-              <input
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                required
-              />
-            </label>
-            <button type="submit">Subscribe</button>
-          </form>
-        </section>
+        <div className={styles.siteMapTop}>
+          <nav aria-label="Explore" className={styles.siteMapNav}>
+            <h3>Explore</h3>
+            <ul className={styles.siteMapNavBar}>
+              <li>
+                <NavLink to="/" end>
+                  Home
+                </NavLink>
+                <ul className={styles.siteMapSubLink}>
+                  <li>
+                    <NavLink to="/error" end>
+                      Home Submenu
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/error" end>
+                      Home Submenu
+                    </NavLink>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <NavLink to="/about" end>
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/trainings-and-services" end>
+                  Training & Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/pricing" end>
+                  Pricing
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/testimonials" end>
+                  Testimonials
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/facts-and-questions" end>
+                  FAQs
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" end>
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+          <nav aria-label="Follow us" className={styles.siteMapNav}>
+            <h3 className={styles.siteMapNavHeader}>Follow Us</h3>
+            <ul className={styles.siteMapBar}>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  noreferrer
+                  noopener
+                  target="_blank"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/"
+                  noreferrer
+                  noopener
+                  target="_blank"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/" noreferrer noopener target="_blank">
+                  Twitter / X
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/"
+                  noreferrer
+                  noopener
+                  target="_blank"
+                >
+                  Youtube
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/"
+                  noreferrer
+                  noopener
+                  target="_blank"
+                >
+                  LinkIn
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </main>
     </>
   );
