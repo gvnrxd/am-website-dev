@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Import Components Here:
@@ -27,7 +27,7 @@ function App() {
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/site-map" element={<SiteMapPage />} />
             {/* Catch Unknown Routes */}
-            <Route path="/*" element={<ErrorPage />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </main>
       </div>

@@ -7,7 +7,7 @@ import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/am-website-dev"> {/* points to homepage for gh-pages*/}
       <App />
     </BrowserRouter>
   </StrictMode>

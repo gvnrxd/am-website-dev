@@ -32,12 +32,13 @@
 
 .heroContent h1 {
   font-size: var(--h1-font);
+  margin: 0 auto;
 }
 
 .heroContent p {
   text-wrap: anywhere;
-  font-size: calc(var(--h1-font) / 4);
-  max-width: 70%;
+  font-size: calc(var(--h1-font) / 3);
+  max-width: 65%;
   margin: 0 auto;
 }
 
@@ -45,6 +46,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  padding: 0.5rem;
 }
 
 .heroBtnContainer a {
@@ -56,7 +58,7 @@
   flex-direction: column;
   justify-content: center;
   font-weight: bolder;
-  border-radius: 6px;
+  border-radius: 20px;
   transition: all 0.2 ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -95,24 +97,46 @@
   height: 100%;
 }
 
-/* 
-
-Changes hero based on screen size and screen density. On sharper screens grab 2x
-
 .heroSection {
   background: image-set(
-    url("../assets/hero-1280.jpg") 1x,
-    url("../assets/hero-1280@2x.jpg") 2x
-  ) center/cover no-repeat;
+      url("../assets/am-hero.jpg"),
+      url("../assets/am-hero.jpg")
+    )
+    center/cover no-repeat;
+}
+
+@media (min-width: 900px) {
+  .heroContent h1 {
+    max-width: 60%;
+  }
 }
 
 @media (max-width: 768px) {
   .heroSection {
     background: image-set(
-      url("../assets/hero-768.jpg") 1x,
-      url("../assets/hero-768@2x.jpg") 2x
-    ) center/cover no-repeat;
+        url("../assets/am-hero.jpg"),
+        url("../assets/hero-768@2x.jpg")
+      )
+      center/cover no-repeat;
   }
 }
 
-*/
+@media (max-width: 525px) {
+  .heroBtnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 1.5rem;
+    overflow-wrap: anywhere;
+  }
+  .heroBtnContainer > div {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  .heroBtnContainer > div:nth-child {
+    flex: 1 1 100%;
+  }
+  .heroBtnContainer a {
+    padding: 0.5 1rem;
+  }
+}

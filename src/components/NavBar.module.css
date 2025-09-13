@@ -4,6 +4,8 @@
   gap: 1rem;
   padding: 0.75rem 1rem;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: rgba(245, 246, 250, 0.95);
 }
 
 .logoLink {
@@ -13,7 +15,7 @@
 }
 
 .logo {
-  height: 4rem;
+  height: 5rem;
   width: auto;
   display: block;
 }
@@ -40,6 +42,7 @@
   flex: 0 0 auto;
   min-width: 0;
   text-align: left;
+  font-size: 1.125rem;
 }
 
 .navBar a {
@@ -58,4 +61,49 @@
   height: 1rem;
   width: auto;
   vertical-align: middle;
+}
+
+.menuBtn {
+  all: unset;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--menu-fg, #111);
+}
+.menuBtn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.menuBtn:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 220ms ease;
+}
+.line {
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  transition: transform 220ms ease, opacity 180ms ease;
+  transform-origin: center;
+}
+.iconOpen .line:nth-of-type(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.iconOpen .line:nth-of-type(2) {
+  opacity: 0;
+}
+.iconOpen .line:nth-of-type(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .icon,
+  .line {
+    transition: none;
+  }
 }
