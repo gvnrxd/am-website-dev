@@ -105,6 +105,14 @@
     center/cover no-repeat;
 }
 
+.mainWrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
 @media (min-width: 900px) {
   .heroContent h1 {
     max-width: 60%;

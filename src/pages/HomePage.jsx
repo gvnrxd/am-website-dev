@@ -5,6 +5,9 @@ import styles from "./HomePage.module.css";
 import HeroImg from "../assets/am-hero.jpg";
 import SchoolLogo from "../assets/school-logo.png";
 
+// Page components
+
+import UpcomingGames from "../components/UpComingGames.jsx";
 export default function HomePage() {
   return (
     <>
@@ -42,8 +45,8 @@ export default function HomePage() {
             </div>
           </a>
         </section>
-        <div className={styles.wrapper}>
-          <p>main content</p>
+        <div className={styles.mainWrapper}>
+          <UpcomingGames />
         </div>
       </main>
     </>

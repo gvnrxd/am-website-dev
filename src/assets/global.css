@@ -42,7 +42,7 @@ header {
 }
 
 main {
-  background-color: wheat;
+  background-color: blue;
   flex: 1;
   min-height: calc(100vh - var(--nav-h));
 }

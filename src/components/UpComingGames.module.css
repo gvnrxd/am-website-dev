@@ -1,0 +1,29 @@
+.heading {
+  font-size: 2.4rem;
+  padding: 0.5rem 0;
+}
+
+.schoolName {
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0.2rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+@media (max-width: 500px) {
+  .schoolName {
+    display: block;
+    padding: 0.1rem 1rem;
+  }
+}
