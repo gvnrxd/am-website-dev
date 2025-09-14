@@ -1,12 +1,16 @@
 .heading {
   font-size: 2.4rem;
-  padding: 0.5rem 0;
 }
 
 .schoolName {
   font-size: 1rem;
   font-weight: 100;
   padding: 0.2rem;
+}
+
+.gameSec {
+  padding: 1rem;
+  background-color: lightgrey;
 }
 
 .wrapper {
@@ -19,6 +23,30 @@
   align-content: center;
   justify-content: center;
   min-height: 40vh;
+}
+
+.schedule {
+  margin: 0.5rem auto;
+  border-radius: 15px;
+  border: 2px solid blue;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+  transition: all 0.2s ease;
+}
+.schedule:hover {
+  background-color: rgb(156, 156, 215);
+  border-color: rgb(156, 156, 215);
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Active (click or touch) */
+.schedule:active {
+  transform: scale(0.98); /* subtle press-down */
+  background-color: #e0e7ff; /* slightly darker */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 500px) {

@@ -3,12 +3,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   font-size: 1.4rem;
 }
 
 .gameCard {
-  background-color: lightgrey;
+  background-color: lightblue;
   border-radius: 15px;
   padding: 1rem;
   display: flex;

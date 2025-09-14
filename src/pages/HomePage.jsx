@@ -6,8 +6,11 @@ import HeroImg from "../assets/am-hero.jpg";
 import SchoolLogo from "../assets/school-logo.png";
 
 // Page components
-
 import UpcomingGames from "../components/UpComingGames.jsx";
+import TeamPrograms from "../components/TeamPrograms.jsx";
+import Testimonials from "../components/Testimonials.jsx";
+import PlayerHighlights from "../components/PlayerHighlights.jsx";
+
 export default function HomePage() {
   return (
     <>
@@ -47,6 +50,15 @@ export default function HomePage() {
         </section>
         <div className={styles.mainWrapper}>
           <UpcomingGames />
+        </div>
+        <div className={styles.mainWrapper}>
+          <TeamPrograms />
+        </div>
+        <div className={styles.mainWrapper}>
+          <Testimonials />
+        </div>
+        <div className={styles.mainWrapper}>
+          <PlayerHighlights />
         </div>
       </main>
     </>
