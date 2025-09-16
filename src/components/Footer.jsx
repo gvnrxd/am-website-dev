@@ -7,7 +7,7 @@ export default function Footer() {
       <footer>
         <div className={styles.footerTop}>
           <p>
-            <strong>Mission:</strong> Empower athletes with pro-level training.
+            <span>Mission:</span> Empower athletes with pro-level training.
           </p>
           <nav aria-label="Explore" className={styles.footerNav}>
             <h3>Explore</h3>
