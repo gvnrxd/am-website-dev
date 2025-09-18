@@ -1,13 +1,82 @@
-.playerHighlightsSec {
-  padding: 1rem;
+.playerSec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1rem 2rem 1rem;
+  background-color: lightgrey;
 }
 
 .heading {
-  font-size: 2.4rem;
+  font-size: var(--step-3);
 }
 
-.playerSec {
+.sliderContainer {
   display: flex;
-  gap: 1rem;
-  flex: 1 1 100%;
+  justify-content: center;
+}
+
+.cardBox {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: lightblue;
+  color: #fff;
+}
+.pfp {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  background-color: lightblue;
+}
+.meta {
+  text-align: center;
+}
+
+/* let arrows spill outside, but keep slides clipped */
+.playerCarousel {
+  width: 100%;
+  max-width: 640px; /* adjust to taste */
+  margin-inline: auto;
+  position: relative;
+  overflow: visible; /* so arrows can sit outside */
+}
+
+/* keep slide content inside the track */
+.playerCarousel :global(.slick-list) {
+  overflow: hidden;
+  margin: 0 -8px;
+}
+.playerCarousel :global(.slick-slide > div) {
+  padding: 0 8px;
+}
+
+/* arrows slightly outside without causing page scrollbars */
+.playerCarousel :global(.slick-prev),
+.playerCarousel :global(.slick-next) {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  z-index: 2;
+}
+
+/* shift them out using transform (doesn't affect layout/scroll area) */
+.playerCarousel :global(.slick-prev) {
+  left: 0;
+  transform: translate(-60%, -50%);
+}
+.playerCarousel :global(.slick-next) {
+  right: 0;
+  transform: translate(60%, -50%);
+}
+
+/* make the chevrons visible */
+.playerCarousel :global(.slick-prev:before),
+.playerCarousel :global(.slick-next:before) {
+  font-size: 28px;
+  color: #111; /* or #fff on dark bg */
+  opacity: 0.9;
 }

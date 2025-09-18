@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 export default function ErrorPage() {
   return (
     <div style={styles.wrapper}>
@@ -10,9 +12,9 @@ export default function ErrorPage() {
         </h1>
         <p style={styles.subtitle}>Oops — that page took a shot and missed.</p>
         <div style={styles.actions}>
-          <a href="/" style={{ ...styles.btn, ...styles.primary }}>
+          <NavLink to="/" end style={{ ...styles.btn, ...styles.primary }}>
             Go Home
-          </a>
+          </NavLink>
           <button
             onClick={() => window.history.back()}
             style={{ ...styles.btn, ...styles.ghost }}
@@ -98,14 +100,16 @@ function CourtBackground() {
 // --- styles ---
 const styles = {
   wrapper: {
-    minHeight: "100vh",
+    Height: "100dvh", // use dynamic viewport height on mobile
     display: "grid",
     placeItems: "center",
     background: "linear-gradient(180deg, #0b1220 0%, #0a0f1a 100%)",
     color: "#e2e8f0",
     position: "relative",
-    overflow: "hidden",
-    padding: "2rem",
+    // overflow: "hidden",               // remove this so content can scroll if needed
+    overflowX: "hidden", // prevent horizontal scroll
+    overflowY: "auto",
+    padding: "clamp(16px, 4vw, 32px)", // responsive padding
   },
   court: {
     position: "absolute",
@@ -114,24 +118,28 @@ const styles = {
     height: "100%",
     opacity: 0.45,
   },
+
   card: {
     position: "relative",
     zIndex: 1,
-    width: "min(900px, 96vw)",
+    width: "100%", // fill the wrapper’s content box
+    maxWidth: "900px", // instead of min(900px, 96vw)
     background: "rgba(15, 23, 42, 0.65)",
     border: "1px solid rgba(255,255,255,0.08)",
     boxShadow: "0 10px 30px rgba(0,0,0,.35)",
     borderRadius: "24px",
-    padding: "2.25rem",
+    padding: "clamp(16px, 4vw, 36px)",
     textAlign: "center",
     backdropFilter: "blur(6px)",
+    boxSizing: "border-box",
+    margin: "0 auto",
   },
   title: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     gap: "1rem",
-    fontSize: "clamp(3rem, 6vw, 7rem)",
+    fontSize: "clamp(2.25rem, 9vw, 6rem)", // lower the min so it fits small screens
     letterSpacing: "2px",
     margin: 0,
   },

@@ -17,10 +17,13 @@ export default function HomePage() {
       <main>
         <section aria-labelledby="hero-section" className={styles.heroSection}>
           <div className={styles.heroContent}>
-            <h1>Coach Anthony McCutcheon</h1>
+            <h1>
+              Coach Anthony<br></br> McCutcheon
+            </h1>
             <p>
-              Developing athletes and inspiring students through discipline,
-              teamwork, and skill development.
+              Developing athletes and inspiring students through{" "}
+              <strong>discipline</strong>, <strong>teamwork</strong>, and{" "}
+              <strong>skill development</strong>.
             </p>
             <div className={styles.heroBtnContainer}>
               <NavLink to="/error" end>
@@ -37,15 +40,16 @@ export default function HomePage() {
           <a
             href="https://www.somersetcanyons.com/index1.jsp"
             target="_blank"
-            noopener
-            norefferer
+            rel="noopener noreferrer"
+            id="school-link"
+            className={styles.heroFooter}
           >
-            <div className={styles.heroFooter}>
-              <img src={SchoolLogo} />
-              <span>
-                Head Coach at<br></br> Somerset Academy
-              </span>
-            </div>
+            <img src={SchoolLogo} alt="Somerset Academy logo" />
+            <span>
+              Head Coach at
+              <br />
+              Somerset Academy
+            </span>
           </a>
         </section>
         <div className={styles.mainWrapper}>

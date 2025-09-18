@@ -24,7 +24,7 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/" element={<AboutUsPage />} />
             <Route path="/site-map" element={<SiteMapPage />} />
             {/* Catch Unknown Routes */}
             <Route path="*" element={<ErrorPage />} />

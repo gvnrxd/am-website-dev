@@ -1,49 +1,77 @@
+/* Grid of cards */
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-  padding: 1rem 1rem;
-  font-size: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: stretch; /* other cards stretch to the tallest one */
 }
 
+/* Card */
 .gameCard {
-  background-color: lightblue;
-  border-radius: 15px;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 0.5rem;
+
+  /* LET THE CARD GROW with content instead of forcing a fixed height */
+  height: auto; /* ✅ allow natural height */
+  min-height: clamp(
+    200px,
+    28vw,
+    260px
+  ); /* baseline so tiny cards don’t look stubby */
+  overflow: visible; /* don’t clip inner content */
+  box-sizing: border-box;
+
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background-color: lightblue;
+  color: black;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+
+  font-size: var(--step--1);
 }
 
+/* Title — allow an extra line so it doesn't clip */
 .title {
-  font-weight: bolder;
-  flex: 1;
-  max-width: 90%;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.25rem;
+
+  /* If you were clamping to 2 lines, loosen it or remove entirely */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* was 2 — increase or delete these 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  font-size: var(--step-0);
 }
 
-.meta {
-  font-weight: 100;
-  color: #111;
-  font-style: italic;
-  font-size: 1rem;
+/* Date under title on one line */
+.title .meta {
+  display: block;
+  margin-top: 0.35rem;
+
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Location pinned to bottom, but won't overlap */
+small.meta {
+  margin-top: auto; /* pushes location to bottom */
 }
 
 .loc {
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1.2rem;
-}
-.reset {
-  color: black;
-  font-weight: 900;
+  display: block;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@media (max-width: 620px) {
-  .list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
+.reset {
+  font-weight: 600;
 }

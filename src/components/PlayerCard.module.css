@@ -1,18 +1,27 @@
+/* card fills its grid cell and keeps a nice ratio */
 .cardBox {
-  background-color: blue;
-  border-radius: 10px;
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: stretch;
-  color: white;
-  width: 60%;
+  display: grid;
+  grid-template-rows: 1fr auto; /* image area + bottom band */
+  aspect-ratio: 3 / 4; /* adjust to taste; keeps height consistent */
+  border-radius: 12px;
   overflow: hidden;
-  margin: 1rem 0;
+  background-color: darkblue;
+  color: black;
+  text-decoration: none; /* remove underline on <a> */
 }
 
-.cardBox > * {
-  flex: 1 1 25%;
+.pfp {
+  width: 100%;
+  height: 100%; /* fill the top grid row */
+  object-fit: cover; /* crop without squish */
+  display: block;
+}
+
+.meta {
+  grid-row: 2; /* bottom band */
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background-color: white;
+  backdrop-filter: blur(2px); /* optional */
   text-align: center;
 }

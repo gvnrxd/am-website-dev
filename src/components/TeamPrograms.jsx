@@ -1,4 +1,5 @@
 import styles from "./TeamPrograms.module.css";
+import { Link, NavLink } from "react-router-dom";
 
 import programImg from "../assets/programImg.jpeg";
 
@@ -7,7 +8,7 @@ export default function TeamProgram() {
     <>
       <section aria-labelledby="team-programs" className={styles.teamSec}>
         <h2 className={styles.heading} id="team-programs">
-          Team Programs
+          Teams / Programs
           <span className={styles.titleExtra}>Play Ball!</span>
         </h2>
         <div className={styles.programBox}>
@@ -26,7 +27,9 @@ export default function TeamProgram() {
                 our AAU travel program.
               </p>
               <div className={styles.programBtnBox}>
-                <a className={styles.schedule}>Action 1</a>
+                <NavLink to="/error" end className={styles.schedule}>
+                  Join!
+                </NavLink>
               </div>
             </div>
           </div>
@@ -41,11 +44,13 @@ export default function TeamProgram() {
             <div className={styles.programText}>
               <h3>School Program</h3>
               <p>
-                {"\u00A0 >"} Compete at a high level and develop your skills inn
-                our AAU travel program.
+                {"\u00A0 >"} Compete at a high level and elevate your game in
+                our high school basketball program.
               </p>
               <div className={styles.programBtnBox}>
-                <a className={styles.schedule}>Action 1</a>
+                <NavLink to="/error" end className={styles.schedule}>
+                  Join!
+                </NavLink>
               </div>
             </div>
           </div>

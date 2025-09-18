@@ -11,15 +11,15 @@ export default function Testimonials() {
             development and confidence. We are grateful for his dedication to
             the team."
           </p>
-          <span>-Parent of Player</span>
+          <span>— Parent of Player</span>
         </div>
         <div className={styles.testimonial}>
           <p>
-            "Coach McCutcheon hashed a tremendous impact on our daughter's
-            development and confidence. We are grateful for his dedication to
-            the team."
+            “Coach McCutcheon pushed me past my comfort zone. My footwork,
+            defense, and shot selection all leveled up, and my confidence did
+            too.”
           </p>
-          <span>-Parent of Player</span>
+          <span>— Player Name., Varsity Guard (’26)</span>
         </div>
       </section>
     </>

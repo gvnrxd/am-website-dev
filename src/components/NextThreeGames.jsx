@@ -55,20 +55,23 @@ export default function NextThreeGames() {
 
   return (
     <section aria-labelledby="upcoming-games">
+      <h3 id="upcoming-games" style={{ position: "absolute", left: "-9999px" }}>
+        Upcoming games
+      </h3>
       <ul className={styles.list}>
-        {events.map((e) => {
+        {events.slice(0, 3).map((e) => {
+          // limit to 3 if you want
           const key = `${e.title}-${new Date(e.start).toISOString()}`;
           return (
             <li key={key} className={styles.gameCard}>
               <div className={styles.title}>
                 {e.title}
                 <span className={styles.meta}>
-                  <br></br>
                   {formatDateRange(e.start, e.end)}
                 </span>
               </div>
+
               <small className={styles.meta}>
-                <br></br>
                 {e.location && (
                   <span className={styles.loc}>
                     <span className={styles.reset}>Location:</span> {e.location}
