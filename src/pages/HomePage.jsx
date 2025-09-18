@@ -29,7 +29,11 @@ export default function HomePage() {
               <NavLink to="/error" end>
                 Join The Travel Team<span>AAU/Club Program</span>
               </NavLink>
-              <a href="https://www.somersetcanyons.com/apps/pages/index.jsp?uREC_ID=221452&type=d&termREC_ID=&pREC_ID=calendarv2" rel="noopener noreferrer">
+              <a
+                href="https://www.somersetcanyons.com/apps/pages/index.jsp?uREC_ID=221452&type=d&termREC_ID=&pREC_ID=calendarv2"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 See Varsity Schedule<span>Somerset Academy</span>
               </a>
               <NavLink to="/about" end>
