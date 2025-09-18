@@ -29,9 +29,9 @@ export default function HomePage() {
               <NavLink to="/error" end>
                 Join The Travel Team<span>AAU/Club Program</span>
               </NavLink>
-              <NavLink to="/error" end>
+              <a href="https://www.somersetcanyons.com/apps/pages/index.jsp?uREC_ID=221452&type=d&termREC_ID=&pREC_ID=calendarv2" rel="noopener noreferrer">
                 See Varsity Schedule<span>Somerset Academy</span>
-              </NavLink>
+              </a>
               <NavLink to="/about" end>
                 Learn more
               </NavLink>
