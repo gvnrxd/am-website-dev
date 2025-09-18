@@ -16,11 +16,6 @@
 
   /* LET THE CARD GROW with content instead of forcing a fixed height */
   height: auto; /* ✅ allow natural height */
-  min-height: clamp(
-    200px,
-    28vw,
-    260px
-  ); /* baseline so tiny cards don’t look stubby */
   overflow: visible; /* don’t clip inner content */
   box-sizing: border-box;
 

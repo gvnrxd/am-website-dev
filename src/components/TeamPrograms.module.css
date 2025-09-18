@@ -68,7 +68,8 @@
 .schedule {
   margin: 0.5rem auto;
   border-radius: 15px;
-  background-color: darkblue;
+  background-color: #1f2459;
+  border: 2px solid blue;
   padding: 1rem 2rem;
   cursor: pointer;
   color: white;

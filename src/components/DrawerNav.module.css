@@ -40,9 +40,9 @@
   transform: translateX(100%);
   transition: transform 260ms ease;
   background-color: rgba(245, 246, 250, 0.98); /* light soft background */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   z-index: 2;
-  border-radius: 20px 0 0 15px; /* rounded left edge */
+  border-radius: 15px 0 0 15px; /* rounded left edge */
   overflow: hidden;
 }
 .left {
@@ -67,7 +67,7 @@
   padding: 1rem;
   border-bottom: 1px solid #e5e7eb;
   flex: 0 0 auto;
-  background: blue;
+  background-color: #1f2459;
   color: #fff;
 }
 .title {
@@ -79,12 +79,12 @@
 .closeBtn {
   all: unset;
   cursor: pointer;
-  width: 36px;
-  height: 36px;
+  width: 2rem;
+  height: 2rem;
   display: grid;
   place-items: center;
   border-radius: 8px;
-  color: currentColor;
+  color: red;
 }
 .closeBtn:hover {
   background: rgba(255, 255, 255, 0.15);
@@ -95,7 +95,7 @@
 }
 .closeIcon {
   display: block;
-  font-size: 24px;
+  font-size: 2rem;
   line-height: 1;
 }
 

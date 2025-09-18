@@ -5,7 +5,7 @@
   aspect-ratio: 3 / 4; /* adjust to taste; keeps height consistent */
   border-radius: 12px;
   overflow: hidden;
-  background-color: darkblue;
+  background-color: #1f2459;
   color: black;
   text-decoration: none; /* remove underline on <a> */
 }
@@ -20,7 +20,7 @@
 .meta {
   grid-row: 2; /* bottom band */
   width: 100%;
-  padding: 0.6rem 0.8rem;
+  padding: 1rem 0.8rem;
   background-color: white;
   backdrop-filter: blur(2px); /* optional */
   text-align: center;
